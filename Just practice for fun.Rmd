@@ -1,0 +1,16 @@
+---
+title: "EDRM 718 Play for fun"
+output: html_notebook
+---
+
+```{r include=FALSE}
+library(tidyverse)
+
+inc_data <- read_csv("Ethnic Income Data.csv")
+
+inc_data$Race <- factor(inc_data$Race,
+                        levels = c("b", "h", "w"),
+                        labels = c("Black", "Hispanic", "White"))
+
+```
+
